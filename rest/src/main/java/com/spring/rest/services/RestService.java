@@ -6,14 +6,27 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.spring.rest.model.Person;
+
 @Controller
 @RequestMapping("/api")
 
 public class RestService {
 
-	@RequestMapping(value = "/test", method = RequestMethod.GET)
+	@RequestMapping(value = "/str", method = RequestMethod.GET)
 	@ResponseBody
 	public String getDummy(ModelMap map) {
+
 		return "Rest Controller is working!!!!";
+	}
+
+	@RequestMapping(value = "/obj", method = RequestMethod.GET)
+	@ResponseBody
+	public Person getObj() {
+		Person person = new Person();
+		person.setAge(10);
+		person.setFname("GGG");
+		person.setLname("FFF");
+		return person;
 	}
 }
