@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.spring.rest.model.Person;
+import com.spring.rest.modal.Person;
 
 @Controller
 @RequestMapping("/api")
