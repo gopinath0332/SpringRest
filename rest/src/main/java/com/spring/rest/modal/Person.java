@@ -1,11 +1,30 @@
 
 package com.spring.rest.modal;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity(name = "person")
 public class Person {
 
-	public String fname;
-	public String lname;
-	public int age;
+	@Id
+	@Column(name = "id")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
+	private String fname;
+	private String lname;
+	private int age;
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
 
 	public String getFname() {
 		return fname;
@@ -29,5 +48,10 @@ public class Person {
 
 	public void setAge(int age) {
 		this.age = age;
+	}
+
+	@Override
+	public String toString() {
+		return "Person [fname=" + fname + ", lname=" + lname + ", age=" + age + "]";
 	}
 }

@@ -2,7 +2,7 @@ package com.spring.rest.modal;
 
 import java.util.List;
 
-public class PersonList<T> {
+public class ContactList<T> {
 	List<T> persons;
 
 	public List<T> getPersons() {
