@@ -4,16 +4,15 @@
 <head>
 <meta charset="utf-8">
 <title>Angular Js</title>
-<link rel="stylesheet"
-	href="./resources/lib/bootstrap.css" media="screen"
-	title="no title" charset="utf-8">
+<link rel="stylesheet" href="./resources/lib/bootstrap.css"
+	media="screen" title="no title" charset="utf-8">
 <script src="./resources/lib/angular.js"></script>
 <script src="./resources/lib/jquery.js"></script>
-<script src="./resources/lib/bootstrap.js"
-	charset="utf-8"></script>
+<script src="./resources/lib/bootstrap.js" charset="utf-8"></script>
 </head>
 
 <body ng-app="angularapp">
+	<hr></hr>
 	<div id="markController" ng-controller="MarkController">
 		<div>
 			<div>

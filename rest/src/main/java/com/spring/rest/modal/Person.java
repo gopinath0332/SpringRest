@@ -14,8 +14,14 @@ public class Person {
 	@Column(name = "id")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
+	
+	@Column(name = "fname")
 	private String fname;
+	
+	@Column(name = "lname")
 	private String lname;
+	
+	@Column(name = "age")
 	private int age;
 
 	public int getId() {

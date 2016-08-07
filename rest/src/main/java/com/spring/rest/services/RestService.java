@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -71,5 +72,11 @@ public class RestService {
 	@ResponseBody
 	public Object getDbList() {
 		return this.impl.getList();
+	}
+
+	@RequestMapping(value = "/contact", method = RequestMethod.POST)
+	@ResponseBody
+	public String updateContact(@RequestBody String body) {
+		return this.impl.updateContact(body);
 	}
 }

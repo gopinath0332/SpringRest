@@ -7,16 +7,6 @@ const PERSON_URL = "./api/list-db";
 
 
 appMoule.controller("MarkController", ($scope,$http) => {
-//    $scope.students = [];
-//    $.ajax({
-//        url: PERSON_URL,
-//        async: true
-//    }).then((list) => {
-//        $scope.students = list;
-//        console.debug(list);
-//    }, (error) => {
-//        console.error("Error in fetching list:::");
-//    });
 	
 	$http.get(PERSON_URL).success((list)=>{
 		$scope.students = list;
@@ -27,6 +17,13 @@ appMoule.controller("MarkController", ($scope,$http) => {
             "fname": $scope.templateHolder.first_name,
             "lname": $scope.templateHolder.last_name
         };
+        let config = {
+        		headers: {
+        			   'Content-Type': "applications/json"
+        			 },
+        			 handle:"string"
+        };
         $scope.students.push(newObj);
+        $http.post("./api/contact",newObj,config);
     };
 });
