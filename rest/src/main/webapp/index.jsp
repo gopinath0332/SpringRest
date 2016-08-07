@@ -27,7 +27,7 @@
 				<button class="btn btn-success" ng-click=updateMark()>Add</button>
 			</div>
 			<br>
-			<div class="col-xs-2">
+			<div class="col-xs-3">
 				<input type="text" class="form-control" ng-model="rowFilter"
 					placeholder="Filter...">
 			</div>
